@@ -20,6 +20,8 @@ window.basicPlaceholder = {
 
 		}
 
+		return true
+
 	},
 
 	_isError(input) {
