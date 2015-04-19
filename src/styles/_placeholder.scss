@@ -1,0 +1,54 @@
+/* Placeholder ------------------------------------------------*/
+.basicPlaceholder {
+
+	position: relative;
+
+	&__placeholder {
+		position: absolute;
+		padding: 2px 5px 2px 10px;
+		right: 8px;
+		top: 50%;
+		background: rgba($basicPlaceholder__backgroundColor, .7);
+		color: $basicPlaceholder__textColor;
+		font-size: 14px;
+		z-index: $basicPlaceholder__zIndex;
+		border-left: 1px solid $basicPlaceholder__borderColor;
+		transform: translateY(-50%);
+		animation: basicPlaceholder__fadeIn $basicPlaceholder__duration $basicPlaceholder__timing;
+		border-radius: 0;
+		pointer-events: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+	}
+
+	input {
+		width: 100%;
+		padding: 10px;
+		background: $basicPlaceholder__backgroundColor;
+		border: 1px solid $basicPlaceholder__borderColor;
+		transition: border-color $basicPlaceholder__duration $basicPlaceholder__timing;
+		box-shadow: none;
+		border-radius: 0;
+
+		&:focus {
+			outline: 0;
+			border-color: $basicPlaceholder__textColor;
+		}
+	}
+
+	input.#{ $basicPlaceholder__errorClass },
+	input.#{ $basicPlaceholder__errorClass }:focus {
+		border-color: $basicPlaceholder__errorColor;
+	}
+
+	input.#{ $basicPlaceholder__errorClass } + &__placeholder {
+		color: $basicPlaceholder__errorColor;
+		border-left-color: $basicPlaceholder__errorColor;
+	}
+
+	input[disabled] + &__placeholder {
+		background: none;
+	}
+
+}

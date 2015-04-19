@@ -1,0 +1,15 @@
+/* Colors ----------------------------------------------------*/
+$basicPlaceholder__backgroundColor:	#ffffff !default;
+$basicPlaceholder__textColor:		rgba(0, 0, 0, .6) !default;
+$basicPlaceholder__borderColor:		rgba(0, 0, 0, .4) !default;
+$basicPlaceholder__errorColor:		#d8000c !default;
+
+/* Vars ------------------------------------------------------*/
+$basicPlaceholder__zIndex:		1 !default;
+$basicPlaceholder__duration:	.4s !default;
+$basicPlaceholder__timing:		ease-in-out !default;
+$basicPlaceholder__errorClass:	'error';
+
+/* Files -----------------------------------------------------*/
+@import 'animations';
+@import 'placeholder';

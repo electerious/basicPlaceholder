@@ -1,0 +1,30 @@
+{
+  "name": "basicPlaceholder",
+  "version": "1.0.0",
+  "authors": [
+    "Tobias Reich <tobias.reich.ich@gmail.com>"
+  ],
+  "description": "Easy-to-use persistent placeholders for input fields",
+  "main": "dist/basicPlaceholder.min.js",
+  "keywords": [
+    "input",
+    "js",
+    "placeholder",
+    "tooltip",
+    "error"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/electerious/basicPlaceholder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/basicPlaceholder.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "etc"
+  ]
+}
