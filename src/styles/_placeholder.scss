@@ -3,6 +3,7 @@
 
 	position: relative;
 
+	// Placeholder ---------------------------------------------------------- //
 	&__placeholder {
 		position: absolute;
 		padding: 2px 5px 2px 10px;
@@ -22,6 +23,7 @@
 		user-select: none;
 	}
 
+	// Input ---------------------------------------------------------------- //
 	input {
 		width: 100%;
 		padding: 10px;
@@ -37,16 +39,29 @@
 		}
 	}
 
-	input.#{ $basicPlaceholder__errorClass },
-	input.#{ $basicPlaceholder__errorClass }:focus {
+	// Warning -------------------------------------------------------------- //
+	input[data-basicPlaceholder-warning=''],
+	input[data-basicPlaceholder-warning='']:focus {
+		border-color: $basicPlaceholder__warningColor;
+	}
+
+	input[data-basicPlaceholder-warning=''] + &__placeholder {
+		color: $basicPlaceholder__warningColor;
+		border-left-color: $basicPlaceholder__warningColor;
+	}
+
+	// Error ---------------------------------------------------------------- //
+	input[data-basicPlaceholder-error=''],
+	input[data-basicPlaceholder-error='']:focus {
 		border-color: $basicPlaceholder__errorColor;
 	}
 
-	input.#{ $basicPlaceholder__errorClass } + &__placeholder {
+	input[data-basicPlaceholder-error=''] + &__placeholder {
 		color: $basicPlaceholder__errorColor;
 		border-left-color: $basicPlaceholder__errorColor;
 	}
 
+	// Disabled ------------------------------------------------------------- //
 	input[disabled] + &__placeholder {
 		background: none;
 	}

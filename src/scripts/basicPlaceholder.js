@@ -1,11 +1,12 @@
 window.basicPlaceholder = {
 
-	_errorClass: 'error',
-	_iconHTML: '<span class="fa fa-warning"></span>',
+	errorText: null,
+	warningText: null,
 
-	init() {
+	init(inputs = [], opts = {}) {
 
-		var inputs = document.querySelectorAll('.basicPlaceholder input')
+		basicPlaceholder.errorText		= opts.errorText || 'Invalid'
+		basicPlaceholder.warningText	= opts.warningText || 'Invalid'
 
 		for (let i = 0; i < inputs.length; ++i) {
 
@@ -26,7 +27,19 @@ window.basicPlaceholder = {
 
 	_isError(input) {
 
-		return input.classList.contains(basicPlaceholder._errorClass)
+		var error = input.getAttribute('data-basicPlaceholder-error')
+
+		if (error!==null&&error!=='false')	return true
+		else								return false
+
+	},
+
+	_isWarning(input) {
+
+		var warning = input.getAttribute('data-basicPlaceholder-warning')
+
+		if (warning!==null&&warning!=='false')	return true
+		else									return false
 
 	},
 
@@ -41,11 +54,13 @@ window.basicPlaceholder = {
 
 	_onChange() {
 
-		var input	= this,
-			isError	= basicPlaceholder._isError(input)
+		var input		= this,
+			isError		= basicPlaceholder._isError(input),
+			isWarning	= basicPlaceholder._isWarning(input)
 
 		// Remove error placeholder
-		if (isError===true) basicPlaceholder._remove(input)
+		if (isError===true)		basicPlaceholder._remove(input)
+		if (isWarning===true)	basicPlaceholder._remove(input)
 
 		// Show basicPlaceholder when input contains chars
 		if (input.value.length>0)	basicPlaceholder._add(input)
@@ -59,18 +74,20 @@ window.basicPlaceholder = {
 			customText		= input.getAttribute('data-basicPlaceholder-text'),
 			wrapper			= input.parentElement,
 			isError			= basicPlaceholder._isError(input),
+			isWarning		= basicPlaceholder._isWarning(input),
 			isPersistent	= basicPlaceholder._isPersistent(input),
 			html			= null
 
 		// Do not add a placeholder when ...
-		// 1) input empty, not an error and not persistent
+		// 1) input empty, not persistent, not an error and not a warning
 		// 2) a placeholder has already been added to the input
-		if (isPersistent===false&&input.value.length===0&&isError===false)	return false
-		if (input.getAttribute('data-basicPlaceholder')==='true')			return false
+		if (input.value.length===0&&isPersistent===false&&isError===false&&isWarning===false)	return false
+		if (input.getAttribute('data-basicPlaceholder')==='true')								return false
 
 		// Set placeholder text
-		if (isError===true)	text = basicPlaceholder._iconHTML
-		else				text = input.getAttribute('placeholder') || null
+		if (isError===true)			text = basicPlaceholder.errorText
+		else if (isWarning===true)	text = basicPlaceholder.warningText
+		else						text = input.getAttribute('placeholder') || null
 
 		// Set custom text when available
 		if (customText!==null&&customText.length>0) text = customText
@@ -100,8 +117,9 @@ window.basicPlaceholder = {
 
 		placeholder.remove()
 
-		input.classList.remove(basicPlaceholder._errorClass)
-		input.setAttribute('data-basicPlaceholder', false)
+		input.removeAttribute('data-basicPlaceholder-error')
+		input.removeAttribute('data-basicPlaceholder-warning')
+		input.removeAttribute('data-basicPlaceholder', false)
 
 		return true
 
