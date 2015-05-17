@@ -42,7 +42,9 @@ Add inputs to your website and wrap `div`-elements with the class `basicPlacehol
 Init basicPlaceholder with the following command:
 
 ```js
-basicPlaceholder.init()
+var inputs = document.querySelectorAll('.basicPlaceholder input')
+
+basicPlaceholder.init(inputs)
 ```
 
 ## Custom text
