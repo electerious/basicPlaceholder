@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+	<meta charset="utf-8">
+	<title>basicPlaceholder Demo</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link rel="stylesheet" href="../dist/basicPlaceholder.min.css">
+
+	<style>
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		body {
+			background: #eee;
+		}
+
+		.wrapper {
+			margin: 50px auto;
+			padding: 35px 30px;
+			max-width: 400px;
+			background: white;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		}
+
+		.basicPlaceholder {
+			margin-bottom: 10px;
+		}
+
+	</style>
+
+	<div class="wrapper">
+
+		<div class="basicPlaceholder">
+			<input type="text" placeholder="Placeholder" value="" data-basicPlaceholder-error>
+		</div>
+
+		<div class="basicPlaceholder">
+			<input type="text" placeholder="Placeholder" value="" data-basicPlaceholder-warning>
+		</div>
+
+	</div>
+
+	<script src="../dist/basicPlaceholder.min.js"></script>
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+
+			var inputs = document.querySelectorAll('.basicPlaceholder input')
+
+			basicPlaceholder.init(inputs, {
+				errorText: 'Custom Error',
+				warningText: 'Custom Warning'
+			})
+
+		})
+
+	</script>
+
+</html>
