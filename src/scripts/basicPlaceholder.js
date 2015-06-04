@@ -115,7 +115,7 @@ window.basicPlaceholder = {
 		if (isPersistent===true)	return false
 		if (placeholder===null)		return false
 
-		placeholder.remove()
+		placeholder.parentNode.removeChild(placeholder)
 
 		input.removeAttribute('data-basicPlaceholder-error')
 		input.removeAttribute('data-basicPlaceholder-warning')
