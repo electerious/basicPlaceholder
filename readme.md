@@ -12,7 +12,10 @@ basicPlaceholder is written in Vanilla JS and works in all modern browsers.
 
 ## Installation
 
+We recommend to install basicPlaceholder using [Bower](http://bower.io/) or [npm](https://npmjs.com).
+
 	bower install basicPlaceholder
+	npm install basicplaceholder
 	
 ## Requirements
 
