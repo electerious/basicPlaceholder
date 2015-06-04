@@ -24,11 +24,11 @@ All of these APIs are capable of being polyfilled in older browser. Check the li
 
 ## How to use
 
-Simply include the following files in your HTML:
+Include the CSS file in the `head` and the JS file at the end of your `body`:
 
 ```html
-<link type="text/css" rel="stylesheet" href="bower_components/basicPlaceholder/dist/basicPlaceholder.min.css">
-<script async type="text/javascript" src="bower_components/basicPlaceholder/dist/basicPlaceholder.min.js"></script>
+<link rel="stylesheet" href="dist/basicPlaceholder.min.css">
+<script src="dist/basicPlaceholder.min.js"></script>
 ```
 
 Add inputs to your website and wrap `div`-elements with the class `basicPlaceholder` around them:
