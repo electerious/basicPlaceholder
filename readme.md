@@ -10,6 +10,12 @@ basicPlaceholder adds a label to the right side of an input when the original pl
 
 basicPlaceholder is written in Vanilla JS and works in all modern browsers.
 
+## Features
+
+- Works in all modern browsers
+- Written in Vanilla JS
+- CommonJS and AMD support
+
 ## Installation
 
 We recommend to install basicPlaceholder using [Bower](http://bower.io/) or [npm](https://npmjs.com).
