@@ -3,7 +3,7 @@
   "moduleName": "basicPlaceholder",
   "version": "1.2.0",
   "authors": [
-    "Tobias Reich <tobias.reich.ich@gmail.com>"
+    "Tobias Reich <tobias@electerious.com>"
   ],
   "description": "Easy-to-use persistent placeholders for input fields",
   "main": "dist/basicPlaceholder.min.js",
