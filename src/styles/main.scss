@@ -1,14 +1,14 @@
 /* Colors ----------------------------------------------------*/
-$basicPlaceholder__backgroundColor:	#ffffff !default;
-$basicPlaceholder__textColor:		rgba(0, 0, 0, .6) !default;
-$basicPlaceholder__borderColor:		rgba(0, 0, 0, .4) !default;
-$basicPlaceholder__errorColor:		#d8000c !default;
-$basicPlaceholder__warningColor:	#e3a11b !default;
+$basicPlaceholder__backgroundColor : #ffffff !default;
+$basicPlaceholder__textColor       : rgba(0, 0, 0, .6) !default;
+$basicPlaceholder__borderColor     : rgba(0, 0, 0, .4) !default;
+$basicPlaceholder__errorColor      : #d8000c !default;
+$basicPlaceholder__warningColor    : #e3a11b !default;
 
 /* Vars ------------------------------------------------------*/
-$basicPlaceholder__zIndex:		1 !default;
-$basicPlaceholder__duration:	.4s !default;
-$basicPlaceholder__timing:		ease-in-out !default;
+$basicPlaceholder__zIndex   : 1 !default;
+$basicPlaceholder__duration : .4s !default;
+$basicPlaceholder__timing   : ease-in-out !default;
 
 /* Files -----------------------------------------------------*/
 @import 'animations';
