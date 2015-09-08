@@ -1,4 +1,4 @@
-var errorText   = null,
+let errorText   = null,
     warningText = null
 
 const init = function(inputs = [], opts = {}) {
@@ -25,7 +25,7 @@ const init = function(inputs = [], opts = {}) {
 
 const isError = function(input) {
 
-	var error = input.getAttribute('data-basicPlaceholder-error')
+	let error = input.getAttribute('data-basicPlaceholder-error')
 
 	if (error!==null && error!=='false') return true
 	else                                 return false
@@ -34,7 +34,7 @@ const isError = function(input) {
 
 const isWarning = function(input) {
 
-	var warning = input.getAttribute('data-basicPlaceholder-warning')
+	let warning = input.getAttribute('data-basicPlaceholder-warning')
 
 	if (warning!==null && warning!=='false') return true
 	else                                     return false
@@ -43,7 +43,7 @@ const isWarning = function(input) {
 
 const isPersistent = function(input) {
 
-	var persistent = input.getAttribute('data-basicPlaceholder-persistent')
+	let persistent = input.getAttribute('data-basicPlaceholder-persistent')
 
 	if (persistent!==null && persistent!=='false') return true
 	else                                           return false
@@ -52,7 +52,7 @@ const isPersistent = function(input) {
 
 const onChange = function() {
 
-	var input      = this,
+	let input      = this,
 	    _isError   = isError(input),
 	    _isWarning = isWarning(input)
 
@@ -68,7 +68,7 @@ const onChange = function() {
 
 const add = function(input) {
 
-	var text          = null,
+	let text          = null,
 	    customText    = input.getAttribute('data-basicPlaceholder-text'),
 	    wrapper       = input.parentElement,
 	    _isError      = isError(input),
@@ -106,14 +106,14 @@ const add = function(input) {
 
 const remove = function(input) {
 
-	var wrapper       = input.parentElement,
+	let wrapper       = input.parentElement,
 	    placeholder   = wrapper.querySelector('.basicPlaceholder__placeholder'),
 	    _isPersistent = isPersistent(input)
 
 	if (_isPersistent===true) return false
 	if (placeholder===null)   return false
 
-	placeholder.parentNode.removeChild(placeholder)
+	placeholder.parentElement.removeChild(placeholder)
 
 	input.removeAttribute('data-basicPlaceholder-error')
 	input.removeAttribute('data-basicPlaceholder-warning')
