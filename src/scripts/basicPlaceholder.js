@@ -14,8 +14,7 @@ const init = function(inputs = [], opts = {}) {
 		add(input)
 
 		// Update placeholder
-		input.onclick = onChange
-		input.onkeyup = onChange
+		input.oninput = onChange
 
 	}
 
