@@ -35,10 +35,9 @@
     "gulp-concat": "^2.6.0",
     "gulp-footer": "^1.0.5",
     "gulp-header": "^1.7.1",
-    "gulp-load-plugins": "^1.0.0",
+    "gulp-load-plugins": "^1.1.0",
     "gulp-minify-css": "^1.2.1",
-    "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.4.2",
-    "gulp-util": "^3.0.6"
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.4.2"
   }
 }
