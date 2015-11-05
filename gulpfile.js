@@ -1,4 +1,4 @@
-var	name    = require('./package.json').moduleName,
+var name    = require('./package.json').moduleName,
     fs      = require('fs'),
     gulp    = require('gulp'),
     plugins = require('gulp-load-plugins')()
