@@ -1,7 +1,7 @@
 let errorText   = null,
     warningText = null
 
-const init = function(inputs = [], opts = {}) {
+export const init = function(inputs = [], opts = {}) {
 
 	errorText   = opts.errorText || 'Invalid'
 	warningText = opts.warningText || 'Invalid'
@@ -127,5 +127,3 @@ const render = function(text = '') {
 	return `<div class="basicPlaceholder__placeholder">${ text }</a>`
 
 }
-
-return { init }
