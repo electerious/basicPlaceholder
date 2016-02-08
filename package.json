@@ -13,6 +13,10 @@
     "placeholder",
     "tooltip"
   ],
+  "scripts": {
+    "start": "gulp watch",
+    "compile": "gulp"
+  },
   "license": "MIT",
   "homepage": "http://github.com/electerious/basicPlaceholder",
   "repository": {
