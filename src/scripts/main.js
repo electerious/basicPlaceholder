@@ -1,5 +1,5 @@
-let errorText   = null,
-    warningText = null
+let errorText   = null
+let warningText = null
 
 export const init = function(inputs = [], opts = {}) {
 
@@ -51,9 +51,9 @@ const isPersistent = function(input) {
 
 const onChange = function() {
 
-	let input      = this,
-	    _isError   = isError(input),
-	    _isWarning = isWarning(input)
+	let input      = this
+	let _isError   = isError(input)
+	let _isWarning = isWarning(input)
 
 	// Remove error placeholder
 	if (_isError===true)   remove(input)
@@ -67,13 +67,13 @@ const onChange = function() {
 
 const add = function(input) {
 
-	let text          = null,
-	    customText    = input.getAttribute('data-basicPlaceholder-text'),
-	    wrapper       = input.parentElement,
-	    _isError      = isError(input),
-	    _isWarning    = isWarning(input),
-	    _isPersistent = isPersistent(input),
-	    html          = null
+	let text          = null
+	let customText    = input.getAttribute('data-basicPlaceholder-text')
+	let wrapper       = input.parentElement
+	let _isError      = isError(input)
+	let _isWarning    = isWarning(input)
+	let _isPersistent = isPersistent(input)
+	let html          = null
 
 	// Do not add a placeholder when ...
 	// 1) input empty, not persistent, not an error and not a warning
@@ -105,9 +105,9 @@ const add = function(input) {
 
 const remove = function(input) {
 
-	let wrapper       = input.parentElement,
-	    placeholder   = wrapper.querySelector('.basicPlaceholder__placeholder'),
-	    _isPersistent = isPersistent(input)
+	let wrapper       = input.parentElement
+	let placeholder   = wrapper.querySelector('.basicPlaceholder__placeholder')
+	let _isPersistent = isPersistent(input)
 
 	if (_isPersistent===true) return false
 	if (placeholder===null)   return false
