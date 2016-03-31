@@ -24,7 +24,7 @@
     "url": "https://github.com/electerious/basicPlaceholder.git"
   },
   "devDependencies": {
-    "@electerious/basictasks": "^1.1.4",
+    "@electerious/basictasks": "^1.3.0",
     "gulp": "^3.9.1"
   }
 }
