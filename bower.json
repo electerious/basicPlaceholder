@@ -11,6 +11,12 @@
     "placeholder",
     "tooltip"
   ],
+  "ignore": [
+    "**/.*",
+    "demos",
+    "gulpfile.js",
+    "package.json"
+  ],
   "license": "MIT",
   "homepage": "http://github.com/electerious/basicPlaceholder",
   "repository": {
