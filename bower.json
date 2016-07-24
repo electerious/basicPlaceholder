@@ -4,7 +4,10 @@
     "Tobias Reich <tobias@electerious.com>"
   ],
   "description": "Easy-to-use persistent placeholders for input fields",
-  "main": "dist/basicPlaceholder.min.js",
+  "main": [
+    "dist/basicPlaceholder.min.css",
+    "dist/basicPlaceholder.min.js"
+  ],
   "keywords": [
     "input",
     "js",
