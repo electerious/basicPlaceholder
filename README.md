@@ -1,8 +1,8 @@
 # basicPlaceholder
 
-Easy-to-use persistent placeholders for input fields. [Try it live on CodePen](http://codepen.io/electerious/pen/JdPJRe).
+Easy-to-use persistent placeholders for input fields. [Try it live on CodePen](https://codepen.io/electerious/pen/JdPJRe).
 
-![basicPlaceholder Screenshot](http://l.electerious.com/uploads/big/26e55552b2178cc210be4e79021de400.png)
+![basicPlaceholder Screenshot](https://l.electerious.com/uploads/big/26e55552b2178cc210be4e79021de400.png)
 
 ## About
 
@@ -18,11 +18,11 @@ basicPlaceholder is written in Vanilla JS and works in all modern browsers.
 
 ## Installation
 
-We recommend to install basicPlaceholder using [Bower](http://bower.io/) or [npm](https://npmjs.com).
+We recommend to install basicPlaceholder using [Bower](https://bower.io/) or [npm](https://npmjs.com).
 
 	bower install basicPlaceholder
 	npm install basicplaceholder
-	
+
 ## Requirements
 
 basicPlaceholder dependents on the following browser APIs:
