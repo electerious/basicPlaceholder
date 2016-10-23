@@ -25,22 +25,22 @@ We recommend to install basicPlaceholder using [Bower](https://bower.io/) or [np
 
 ## Requirements
 
-basicPlaceholder dependents on the following browser APIs:
+basicPlaceholder depends on the following browser APIs:
 
 - [classList](http://caniuse.com/#feat=classlist)
 
-All of these APIs are capable of being polyfilled in older browser. Check the linked resources above to determine if you must polyfill to achieve your desired level of browser support.
+All of these APIs are capable of being polyfilled in older browsers. Check the linked resources above to determine if you must polyfill to achieve your desired level of browser support.
 
 ## How to use
 
-Include the CSS file in the `head` and the JS file at the end of your `body`:
+Include the CSS file in the `head` tag and the JS file at the end of your `body` tag:
 
 ```html
 <link rel="stylesheet" href="dist/basicPlaceholder.min.css">
 <script src="dist/basicPlaceholder.min.js"></script>
 ```
 
-Add inputs to your website and wrap `div`-elements with the class `basicPlaceholder` around them:
+Add inputs to your website and wrap `div` elements with the class `basicPlaceholder` around them:
 
 ```html
 <div class="basicPlaceholder">
