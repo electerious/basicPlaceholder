@@ -31,7 +31,7 @@ basicPlaceholder depends on the following browser APIs:
 
 All of these APIs are capable of being polyfilled in older browsers. Check the linked resources above to determine if you must polyfill to achieve your desired level of browser support.
 
-## How to use
+## Usage
 
 Include the CSS file in the `head` tag and the JS file at the end of your `body` tag:
 
