@@ -1,4 +1,4 @@
-# basicPlaceholder
+# [Deprecated] basicPlaceholder
 
 Easy-to-use persistent placeholders for input fields. [Try it live on CodePen](https://codepen.io/electerious/pen/JdPJRe).
 
